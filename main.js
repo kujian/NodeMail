@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer"); //发送邮件的node插件
 const ejs = require("ejs"); //ejs模版引擎
 const fs = require("fs"); //文件读写
 const path = require("path"); //路径配置
-const schedule = require("node-schedule"); //定时器任务库
+//const schedule = require("node-schedule"); //定时器任务库
 //配置项
 
 //纪念日
@@ -23,7 +23,7 @@ let EamilAuth = {
 let EmailFrom = '"vince" <xxxxx@126.com>';
 
 //接收者邮箱地
-let EmailTo = "xxxxx@qq.com";
+let EmailTo = "help88488@qq.com";
 //邮件主题
 let EmailSubject = "一封暖暖的小邮件";
 
@@ -193,6 +193,7 @@ function getAllDataAndSendMail(){
     })
 }
 
+/*
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [0, new schedule.Range(1, 6)];
 rule.hour = EmailHour;
@@ -202,3 +203,6 @@ let j = schedule.scheduleJob(rule, function() {
   console.log("执行任务");
   getAllDataAndSendMail();
 });
+*/
+console.log("执行任务");
+getAllDataAndSendMail();
